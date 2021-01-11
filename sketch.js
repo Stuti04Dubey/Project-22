@@ -18,18 +18,15 @@ function preload()
 
 function setup() {
 	createCanvas(800, 750);
-
 	fairyVoice.play();
 
 	fairy = createSprite(130, 520);
 	fairy.addAnimation("fairyflying",fairyImg);  
 	fairy.scale =0.25;
-	
 
 	star = createSprite(650,30);
 	star.addImage(starImg);
 	star.scale = 0.2;
-	
 
 	engine = Engine.create();
 	world = engine.world;
@@ -44,15 +41,17 @@ function setup() {
 
 function draw() {
   background(bgImg);
-if (keyDown("left_arrow")){
-	fairy.x=fairy.x-2;
+
+  if (keyDown("left_arrow")){
+    fairy.x=fairy.x-2;
 }
   if (keyDown("right_arrow")){
-	  fairy.x=fairy.x+2;
+      fairy.x=fairy.x+2;
   }
 if(keyDown("down_arrow")){
-	star.velocityY=2;
+    star.velocityY=2;
 }
+
 
   drawSprites();
 
@@ -60,5 +59,4 @@ if(keyDown("down_arrow")){
 
 function keyPressed() {
 	//write code here
-	
 }
